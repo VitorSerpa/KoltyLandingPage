@@ -11,9 +11,19 @@ body {
     flex-direction: column;
 }
 
+.main-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
 a {
     text-decoration: none;
     font-size: 1rem;
+}
+
+p{
+    font-size: 1.2rem;
 }
 
 .logo-container {
@@ -74,7 +84,6 @@ a {
 }
 
 .main-container p {
-    font-size: 1.2rem;
     color: #3f3f3f;
     letter-spacing: 1px;
     line-height: 1.7rem;
@@ -85,3 +94,63 @@ a {
     color: #377799;
     text-align: center;
 }
+
+.carrousel-imagens{
+    margin-top: 3rem;
+    background-color: grey;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+
+.inicio-kolty-div{
+    width: 100%;
+    background-color: #377799;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+
+.inicio-kolty-text{
+    width: 50%;
+    color: white;
+    text-align: justify;
+}
+
+.footer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.redes-sociais{
+    color: white;
+    background-color: #3f3f3f;
+    width: 100%;
+    display: flex;
+    justify-content: center ;
+    height: 150px;
+}
+
+.direitos-reservados{
+    color: white;
+    background-color:#377799;
+    width: 100%;
+    display: flex;
+    justify-content: center ;
+    height: 150px;
+}
+
+.bndes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+}
+
