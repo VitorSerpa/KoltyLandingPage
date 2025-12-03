@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+    background: #efefef;
+    color: var(--foreground);
+    padding: 0;
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.logo-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container {
+    width: 100%;
+    background-color: grey;
+    height: 350px;
+}
+
+.navbar {
+    background-color: #377799;
+    height: 5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar a {
+    position: relative;
+    color: white;
+    margin: 0 1.2rem;
+    padding-bottom: 3px;
+}
+
+.navbar a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background: #ffffff;
+    transition: 0.3s ease-in-out;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+.main-container {
+    margin-top: 3rem;
+    width: 50%;
+    text-align: justify;
+}
+
+.main-container p {
+    font-size: 1.2rem;
+    color: #3f3f3f;
+    letter-spacing: 1px;
+    line-height: 1.7rem;
+}
+
+.main-container h1 {
+  margin-top: 3rem;
+    color: #377799;
+    text-align: center;
+}
