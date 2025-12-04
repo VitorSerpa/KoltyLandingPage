@@ -152,5 +152,31 @@ p{
     align-items: center;
     justify-content: center;
     height: 400px;
+    background-color: white;
+    width: 100%;
 }
 
+.lista-especialidades {
+    margin-top: 2rem;
+    padding-left: 1.2rem;
+    font-size: 1.2rem;
+    color: #3f3f3f;
+    line-height: 1.8rem;
+    list-style: none;
+}
+
+.lista-especialidades li {
+    margin-bottom: 0.8rem;
+    position: relative;
+    padding-left: 1.8rem;
+}
+
+.lista-especialidades li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #377799;
+    font-weight: bold;
+    font-size: 1.1rem;
+}

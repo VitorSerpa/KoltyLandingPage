@@ -13,11 +13,11 @@ export default function RootLayout({
       >
         <div className="logo-container">
           <div className="image-container">
-            <h3>Imagem da logo aqui</h3>
+            <img src="/images/kolty-engenharia-logo.avif" alt="" />
           </div>
           <nav className="navbar">
-              <a href="">Início</a>
-              <a href="">Sobre</a>
+              <a href="/">Início</a>
+              <a href="/sobre">Sobre</a>
               <a href="">Máquinas</a>
               <a href="">Serviços</a>
               <a href="">Contato</a>

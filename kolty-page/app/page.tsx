@@ -16,21 +16,24 @@ export default function Home() {
                 </p>
 
                 <h1>Especialidades</h1>
-                <p>
-                    Máquinas CNC em geral // Automatização de tornos, fresadoras e
-                    retífica // Concepção total de máquina de corte a plasma //
-                    Fresadoras CNC do tipo router // Projetos especiais
-                    computadorizados a partir do zero.
-                </p>
+
+                <ul className="lista-especialidades">
+                    <li>Máquinas CNC em geral</li>
+                    <li>Automatização de tornos, fresadoras e retíficas</li>
+                    <li>Concepção completa de máquina de corte a plasma</li>
+                    <li>Fresadoras CNC do tipo router</li>
+                    <li>Projetos especiais computadorizados a partir do zero</li>
+                </ul>
+
             </div>
             <div className="carrousel-imagens">
                 <h3>Carrousel de imagens aqui</h3>
             </div>
             <div className="inicio-kolty-div">
-                    <h4>Icone Serra</h4>
+                <img src="images\serraImg.avif" alt="" />
                 <div className="inicio-kolty-text">
                     <p>
-                    A Kolty iniciou suas atividades na Incubadora do Parque Tecnológico UNIVAP em São José dos Campos, SP. Atualmente possui sede própria na Zona Sul de São José dos Campos, SP com 1000m² de área coberta, refeitório e academia para os funcionários. 
+                        A Kolty iniciou suas atividades na Incubadora do Parque Tecnológico UNIVAP em São José dos Campos, SP. Atualmente possui sede própria na Zona Sul de São José dos Campos, SP com 1000m² de área coberta, refeitório e academia para os funcionários.
                     </p>
                 </div>
             </div>
