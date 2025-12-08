@@ -94,6 +94,8 @@ p {
     position: relative;
     color: white;
     padding-bottom: 3px;
+    margin: 1rem;
+    font-size: 1.1rem;
 }
 
 .navbar a::after {
