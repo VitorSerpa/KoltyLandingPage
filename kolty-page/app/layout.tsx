@@ -1,4 +1,3 @@
-import Image from "next/image";
 import "./globals.css";
 
 
@@ -13,31 +12,36 @@ export default function RootLayout({
       >
         <div className="logo-container">
           <div className="image-container">
-            <img src="/images/kolty-engenharia-logo.avif" alt="" />
+            <img className="img-fundo" src="/images/imageFundoLogo.avif" alt="Fundo" />
+            <img className="logo-img" src="/images/kolty-engenharia-logo.avif" alt="Logo" />
           </div>
           <nav className="navbar">
-              <a href="/">Início</a>
-              <a href="/sobre">Sobre</a>
-              <a href="">Máquinas</a>
-              <a href="">Serviços</a>
-              <a href="">Contato</a>
+            <a href="/">Início</a>
+            <a href="/sobre">Sobre</a>
+            <a href="/maquinas">Máquinas</a>
+            <a href="/servicos">Serviços</a>
+            <a href="/contato">Contato</a>
           </nav>
         </div>
+
+
         {children}
         <footer className="footer">
           <div className="bndes">
-            <h4>Icone BNDES</h4>
+            <img src="/images/bndes.avif" alt="" />
             <div className="bndes-text">
-              <p><b>Entre em contato e solicete seu orçamento!</b></p>
-              <h3>Pague em até 48X  utilizando o BNDES</h3>
+              <p><b>Entre em contato e solicite seu orçamento!</b></p>
+              <h3>Pague em até <span className="bold">48X</span> <br />utilizando o <span className="bold">BNDES</span></h3>
             </div>
           </div>
           <div className="redes-sociais">
+            <img src="/icons/koltyIcon.avif" alt="" />
             <h2>Acompanhe nossas redes sociais</h2>
-            <h4>Icone Face e Instagram</h4>
+            <img src="/icons/facebookIcon.avif" alt="" />
+            <img src="/icons/instagramIcon.avif" alt="" />
           </div>
           <div className="direitos-reservados">
-            <p>© 2021 Kolty Engenharia.</p>
+            <p>© 2025 Kolty Engenharia.</p>
           </div>
         </footer>
       </body>
