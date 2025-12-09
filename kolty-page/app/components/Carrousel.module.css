@@ -1,0 +1,72 @@
+.swiper-button-next,
+.swiper-button-prev {
+    color: white;      
+    scale: 1.3;       
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    color: #377799;
+}
+
+.imagemCarrousel{
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.imagemCarrousel {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+@media (max-width: 1200px) {
+    .imagemCarrousel {
+        height: 320px;
+    }
+}
+
+@media (max-width: 992px) {
+    .imagemCarrousel {
+        height: 300px;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        scale: 1.2;
+    }
+}
+
+@media (max-width: 768px) {
+    .imagemCarrousel {
+        height: 250px;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        scale: 1.1;
+    }
+}
+
+@media (max-width: 600px) {
+    .imagemCarrousel {
+        height: 200px;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        scale: 1.0;
+    }
+}
+
+@media (max-width: 400px) {
+    .imagemCarrousel {
+        height: 160px;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        scale: 0.9;
+    }
+}

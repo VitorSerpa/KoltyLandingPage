@@ -134,16 +134,82 @@ Pagamento em até **48x no cartão BNDES**.
                 "/images/corteCO2/imagem17.avif",
                 "/images/corteCO2/imagem18.avif",
                 "/images/corteCO2/imagem19.avif",
-                "/images/corteCO2/imagem20.avif"
             ],
 
             icon: "/icons/corteLaserIcon.avif",
         },
 
         corteLaserFibra: {
-            title: "Corte a Laser de Fibra",
-            desc: `Equipamento de alta potência indicado para corte profissional em metais.`,
-            images: ["/images/fibra1.jpg", "/images/fibra2.jpg"],
+            title: "Laser Fibra para Metais",
+            desc: `**Corte a Laser de Fibra para Metais**
+
+As máquinas de **Corte a Laser de Fibra** da KOLTY Engenharia são fabricadas no Brasil, totalmente configuradas conforme a necessidade do cliente, incluindo área útil, potência do laser e acessórios adicionais.
+
+Trabalhamos com potências entre **1.500W e 12.000W**, permitindo cortes extremamente limpos e precisos, com baixo custo operacional e alta durabilidade dos componentes.
+
+As áreas úteis disponíveis variam entre:  
+• **1500×1500mm**  
+• **1500×3000mm**  
+• **2000×4000mm**  
+• **Até 9000mm** de comprimento (modelos especiais)
+
+---
+
+## **Capacidade de Corte**
+Nossos modelos são capazes de cortar com acabamento de alta qualidade:  
+• **Aço carbono até 28 mm**  
+• **Aço inox até 18 mm**  
+• **Alumínio e ligas especiais**  
+• **Cobre e latão**  
+
+O laser de fibra garante bordas limpas e redução significativa de retrabalhos.
+
+---
+
+## **Diferenciais da KOLTY Engenharia**
+• Fabricação **100% nacional**  
+• Chiller industrial incluso  
+• Estrutura reforçada para máxima estabilidade  
+• Sistema óptico de alta eficiência  
+• Baixo custo de manutenção  
+• Configuração totalmente personalizada  
+• Financiamento **Proger e BNDES (até 48x)**  
+
+---
+
+## **Automação e Precisão**
+• Cabeçote com ajuste automático de foco  
+• Precisão de até **0.01 mm**  
+• Sistema de exaustão incluso  
+• Interface simples e intuitiva  
+
+---
+**Solicite um orçamento!**  
+Pagamento em até **48x no cartão BNDES**.`,
+            images: [
+                "/images/corteLaserFibra/video0.mp4",
+                "/images/corteLaserFibra/video1.mp4",
+                "/images/corteLaserFibra/video2.mp4",
+                "/images/corteLaserFibra/video3.mp4",
+                "/images/corteLaserFibra/imagem0.jpeg",
+                "/images/corteLaserFibra/imagem1.jpeg",
+                "/images/corteLaserFibra/imagem2.jpeg",
+                "/images/corteLaserFibra/imagem3.jpeg",
+                "/images/corteLaserFibra/imagem4.jpeg",
+                "/images/corteLaserFibra/imagem5.jpeg",
+                "/images/corteLaserFibra/imagem6.jpeg",
+                "/images/corteLaserFibra/imagem7.jpeg",
+                "/images/corteLaserFibra/imagem8.jpeg",
+                "/images/corteLaserFibra/imagem9.jpeg",
+                "/images/corteLaserFibra/imagem10.jpeg",
+                "/images/corteLaserFibra/imagem11.jpeg",
+                "/images/corteLaserFibra/imagem12.jpeg",
+                "/images/corteLaserFibra/imagem13.jpeg",
+                "/images/corteLaserFibra/imagem14.jpeg",
+                "/images/corteLaserFibra/imagem15.jpeg",
+                "/images/corteLaserFibra/imagem16.jpeg",
+
+            ],
             icon: "/icons/corteLaserFibra.jpg",
         },
 
@@ -166,13 +232,6 @@ Pagamento em até **48x no cartão BNDES**.
             desc: `Máquina de corte térmico para isopor e espumas técnicas.`,
             images: ["/images/hot1.jpg", "/images/hot2.jpg"],
             icon: "/icons/hotWireIcon.avif",
-        },
-
-        plasma: {
-            title: "Corte a Plasma",
-            desc: `Máquina de corte a plasma com alta precisão.`,
-            images: ["/images/plasma1.jpg", "/images/plasma2.jpg"],
-            icon: "/icons/cortePlasmaIcon.avif",
         },
     };
 
@@ -208,14 +267,27 @@ Pagamento em até **48x no cartão BNDES**.
                         <h2>{selected.title}</h2>
 
                         <div className={style.modal_images}>
-                            {selected.images.map((src, i) => (
-                                <img
-                                    key={i}
-                                    src={src}
-                                    onClick={() => setFullImage(src)} // 👈 abre fullscreen
-                                    style={{ cursor: "pointer" }}
-                                />
-                            ))}
+                            {selected.images.map((src, i) => {
+                                const isVideo = src.match(/\.(mp4|webm|ogg)$/i);
+
+                                return isVideo ? (
+                                    <video
+                                        key={i}
+                                        src={src}
+                                        muted
+                                        autoPlay
+                                        onClick={() => setFullImage(src)}
+                                        style={{ cursor: "pointer" }}
+                                    />
+                                ) : (
+                                    <img
+                                        key={i}
+                                        src={src}
+                                        onClick={() => setFullImage(src)} 
+                                        style={{ cursor: "pointer" }}
+                                    />
+                                );
+                            })}
                         </div>
 
                         <div
@@ -239,7 +311,21 @@ Pagamento em até **48x no cartão BNDES**.
                     className={style.fullscreen_overlay}
                     onClick={() => setFullImage(null)}
                 >
-                    <img src={fullImage} className={style.fullscreen_image} />
+                    {fullImage.match(/\.(mp4|webm|ogg)$/i) ? (
+                        <video
+                            src={fullImage}
+                            className={style.fullscreen_image}
+                            controls
+                            autoPlay
+                            muted
+                            playsInline
+                        />
+                    ) : (
+                        <img
+                            src={fullImage}
+                            className={style.fullscreen_image}
+                        />
+                    )}
                 </div>
             )}
         </main>

@@ -37,8 +37,13 @@ export default function RootLayout({
           <div className="redes-sociais">
             <img src="/icons/koltyIcon.avif" alt="" />
             <h2>Acompanhe nossas redes sociais</h2>
-            <img src="/icons/facebookIcon.avif" alt="" />
-            <img src="/icons/instagramIcon.avif" alt="" />
+            <a href="https://www.facebook.com/KoltyEngenharia/" target="_blank" rel="noopener noreferrer">
+              <img src="/icons/facebookIcon.avif" alt="Facebook" />
+            </a>
+
+            <a href="https://www.instagram.com/kolty_engenharia/" target="_blank" rel="noopener noreferrer">
+              <img src="/icons/instagramIcon.avif" alt="Instagram" />
+            </a>
           </div>
           <div className="direitos-reservados">
             <p>© 2025 Kolty Engenharia.</p>

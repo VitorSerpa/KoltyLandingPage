@@ -21,6 +21,10 @@ body {
     align-items: center;
 }
 
+html, body {
+    overflow-x: hidden !important; 
+}
+
 img {
     max-width: 100%;
     height: auto;
@@ -202,11 +206,13 @@ p {
 .redes-sociais img {
     width: 45px;
     margin: 0 0.6rem;
+    transition: ease-in-out 0.2s;
 }
 
-.redes-sociais img:first-child {
-    width: 70px;
+.redes-sociais img:hover {
+    transform: scale(1.1);
 }
+
 
 .direitos-reservados {
     width: 100%;
@@ -266,9 +272,14 @@ p {
 }
 
 @media (max-width: 1024px) {
-    .main-container, .inicio-kolty-text {
-        width: 70%;
+    .main-container {
+        width: 60%;
     }
+
+    .inicio-kolty-div {
+        width: 50%;
+    }
+
     .image-container .logo-img {
         max-width: 260px;
         width: 45%;
@@ -291,7 +302,7 @@ p {
         width: 40%;
     }
     .inicio-kolty-text {
-        width: 85%;
+        width: 70%;
     }
     .navbar {
         height: auto;

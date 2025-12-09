@@ -4,10 +4,12 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
+import style from "./Carrousel.module.css"
 
 export default function Carrousel() {
     const imagens = [
         "/images/hotWire.avif",
+        "images/corteLaserFibra/imagem13.jpeg",
         "/images/cortePlasmaKolty.avif",
         "/images/oficinaCima.avif",
         "/images/usinagemSurf.avif",
@@ -31,11 +33,7 @@ export default function Carrousel() {
                         <img
                             src={img}
                             alt={`Imagem ${index}`}
-                            style={{
-                                width: "100%",
-                                height: "350px",
-                                objectFit: "cover",
-                            }}
+                            className={style.imagemCarrousel}
                         />
                     </SwiperSlide>
                 ))}
