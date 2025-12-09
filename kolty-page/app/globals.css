@@ -296,7 +296,6 @@ p {
     .navbar {
         height: auto;
         padding: 1rem 0;
-        flex-direction: column;
     }
     .navbar a {
         font-size: 1.1rem;
@@ -352,3 +351,4 @@ p {
         max-width: 280px;
     }
 }
+
