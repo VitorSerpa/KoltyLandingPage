@@ -187,6 +187,7 @@ O laser de fibra garante bordas limpas e redução significativa de retrabalhos.
 **Solicite um orçamento!**  
 Pagamento em até **48x no cartão BNDES**.`,
             images: [
+                "/images/corteLaserFibra/video4.mp4",
                 "/images/corteLaserFibra/video0.mp4",
                 "/images/corteLaserFibra/video1.mp4",
                 "/images/corteLaserFibra/video2.mp4",
@@ -269,13 +270,15 @@ Pagamento em até **48x no cartão BNDES**.`,
                         <div className={style.modal_images}>
                             {selected.images.map((src, i) => {
                                 const isVideo = src.match(/\.(mp4|webm|ogg)$/i);
+                                const isVideo4 = src.includes("video4.mp4");
 
                                 return isVideo ? (
                                     <video
                                         key={i}
                                         src={src}
-                                        muted
+                                        muted={!isVideo4}
                                         autoPlay
+                                        controls={isVideo4}
                                         onClick={() => setFullImage(src)}
                                         style={{ cursor: "pointer" }}
                                     />
@@ -283,7 +286,7 @@ Pagamento em até **48x no cartão BNDES**.`,
                                     <img
                                         key={i}
                                         src={src}
-                                        onClick={() => setFullImage(src)} 
+                                        onClick={() => setFullImage(src)}
                                         style={{ cursor: "pointer" }}
                                     />
                                 );
